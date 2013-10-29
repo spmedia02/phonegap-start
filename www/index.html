@@ -19,7 +19,8 @@
         function onDeviceReady()
         {
             // do your thing!
-            window.open('http://www.google.com/', '_blank');
+            window.plugins.childBrowser.showWebPage('http://www.google.com',
+                                        { showLocationBar: true });
         }
 
         </script>
