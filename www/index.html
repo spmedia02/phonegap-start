@@ -26,6 +26,31 @@
         
         </script>
     </head>
-    <body onload="onBodyLoad()">
+
+<body onload="onBodyLoad()">
+    <div class="app">
+        <h1>Apache Cordova</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova-2.1.0.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <!-- Child Browser -->
+    <script src="ChildBrowser.js"></script>
+    <script type="text/javascript">
+         
+        function onBodyLoad(){
+            document.addEventListener('deviceready', function() {
+                                      // device ready
+                                      window.plugins.childBrowser.showWebPage("http://google.com");
+                                      }, false);
+        }
+         
+        </script>
 </body>
 </html>
