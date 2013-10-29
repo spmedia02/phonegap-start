@@ -9,17 +9,19 @@
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
-        <script type="text/javascript" charset="utf-8" src="ChildBrowser.js">
- 
-        function onBodyLoad(){
+        <script type="text/javascript">
+
+        function onBodyLoad()
+        {       
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         function onDeviceReady()
         {
+            // do your thing!
             window.open('http://www.google.com/', '_blank')
         }
-        
+
         </script>
     <body onload="onBodyLoad()">
     </head>
