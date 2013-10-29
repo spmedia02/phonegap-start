@@ -19,20 +19,13 @@
 
         function onDeviceReady()
         {
-            // do your thing!
-            window.plugins.childBrowser.showWebPage(
-                'https://www.google.co.jp/', {
-                showLocationBar : false
-            });
         }
 
         </script>
         
 <body onload="onBodyLoad()">
-            window.plugins.childBrowser.showWebPage(
-                'https://www.google.co.jp/', {
-                showLocationBar : false
-            });
+        window.plugins.childBrowser.showWebPage('http://www.google.com',
+                                        { showLocationBar: true });
 </body>
     </head>
 </html>
