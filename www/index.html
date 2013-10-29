@@ -23,18 +23,8 @@
             document.addEventListener("backbutton", yourCallbackFunction, false);
         }
         
-        function onBackPressed(){
-            confirmExit()
-        }
- 
-        function confirmCallback(id){
-            if(1 == id){
-                navigator.app.exitApp();
-            }
-        }
- 
-        function confirmExit(){
-            navigator.notification.confirm("アプリケーションを終了しますか？", confirmCallback, "終了メニュー", "終了,キャンセル")
+        function onBackKeyDown() {
+        // やりたいことを記述
         }
 
         </script>
