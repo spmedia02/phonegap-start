@@ -9,11 +9,25 @@
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
+        <script src="ChildBrowser.js"></script>
         <script type="text/javascript">
+         
+        function onBodyLoad(){
+            document.addEventListener('deviceready', function() {
+                                      // device ready
+                                      window.plugins.childBrowser.showWebPage("http://google.com");
+                                      }, false);
+        }
+         
+        </script>
 
         function onBodyLoad()
         {       
             document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener('deviceready', function() {
+                                      // device ready
+                                      window.plugins.childBrowser.showWebPage("http://google.com");
+                                      }, false);
         }
 
         function onDeviceReady()
@@ -24,18 +38,6 @@
         </script>
         
 <body onload="onBodyLoad()">
-    <!-- Child Browser -->
-    <script src="ChildBrowser.js"></script>
-    <script type="text/javascript">
-         
-        function onBodyLoad(){
-            document.addEventListener('deviceready', function() {
-                                      // device ready
-                                      window.plugins.childBrowser.showWebPage("http://google.com");
-                                      }, false);
-        }
-         
-        </script>
 </body>
     </head>
 </html>
