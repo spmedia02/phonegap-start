@@ -14,7 +14,10 @@
 
         function onBodyLoad()
         {       
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener('deviceready', function() {
+                                      // device ready
+                                      window.plugins.childBrowser.showWebPage("http://google.com");
+                                      }, false);
         }
 
         function onDeviceReady()
@@ -23,8 +26,6 @@
         }
 
         </script>
-
-<a onclick="window.plugins.childBrowser.showWebPage('https://www.google.co.jp/');" href="javascript:void(0)">できるかな</a>
         
 <body onload="onBodyLoad()">
 </body>
