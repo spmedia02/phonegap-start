@@ -20,9 +20,8 @@
         {
             // do your thing!
             window.open('http://www.google.com/', '_blank')
+            document.addEventListener("backbutton", yourCallbackFunction, false);
         }
-        
-        document.addEventListener("backbutton", onBackPressed, false);
         
         function onBackPressed(){
             confirmExit()
