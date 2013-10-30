@@ -82,6 +82,7 @@
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="com.phonegap.plugins.childbrowser" />
     <plugin name="ChildBrowserCommand" value="ChildBrowserCommand" />
+    <plugin name="PushPlugin" value="com.plugin.gcm.PushPlugin" />
 
     <!--
         Define access to external domains.
