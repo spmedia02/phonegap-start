@@ -1,26 +1,20 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <head>
-    <title>Hello PhoneGap</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-        <meta charset="utf-8">
-
-
+        <title>com.PhoneGap.c2dm</title>
+    </head>
+    <body>
+        
+        <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="jquery_1.5.2.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
-        <script type="text/javascript" charset="utf-8" src="ChildBrowser.js"></script>        
+        
         <script type="text/javascript">
-
-        function onBodyLoad()
-        {       
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
-
-        function onDeviceReady()
-        {
-                            $("#app-status-ul").append('<li>deviceready event received</li>');
+            var pushNotification;
+            
+            function onDeviceReady() {
+                $("#app-status-ul").append('<li>deviceready event received</li>');
                 
                                 document.addEventListener("backbutton", function(e)
                                 {
@@ -57,7 +51,7 @@
                                         alert(txt); 
                                 } 
             }
-        
+            
             // handle APNS notifications for iOS
             function onNotificationAPN(e) {
                 if (e.alert) {
@@ -140,11 +134,13 @@
             
                         document.addEventListener('deviceready', onDeviceReady, true);
 
-        </script>
-        
-<body onload="onBodyLoad()">
-        window.plugins.childBrowser.showWebPage('http://www.google.com',
-                                        { showLocationBar: true });
-</body>
-    </head>
+         </script>
+                <div id="home">
+                        <div id="app-status-div">
+                                <ul id="app-status-ul">
+                                        <li>Cordova PushNotification Plugin Demo</li>
+                                </ul>
+                        </div>
+                </div>
+    </body>
 </html>
